@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaSpotify, FaGithubAlt } from "react-icons/fa";
 
 const API_URL = "https://ai-vibe-music.onrender.com/ai";
