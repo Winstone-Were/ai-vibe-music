@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaSpotify, FaGithubAlt } from "react-icons/fa";
 
-const API_URL = "http://localhost:3000/ai";
+const API_URL = "https://ai-vibe-music.onrender.com/ai";
 
 interface Song {
   title: string;
