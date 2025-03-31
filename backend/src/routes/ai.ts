@@ -12,7 +12,7 @@ const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 router.post("/", async (req, res) => {
   try {
     const { vibe } = req.body;
-    const prompt = `Give 3 song titles from spotify that matches this vibe: "${vibe}" in the format {Song:"song_name", Artist:"artist_name", Deescription: "2 sentence description"} no fancy formatting just text`;
+    const prompt = `Give 5 song titles from spotify that matches this vibe: "${vibe}" in the format {Song:"song_name", Artist:"artist_name", Deescription: "2 sentence description"} no fancy formatting just text`;
 
     const response = await ai.models.generateContent({
       model: "gemini-1.5-flash",
