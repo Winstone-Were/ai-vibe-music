@@ -1,0 +1,23 @@
+name: Deploy Backend to Render
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "backend/**"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: |
+          cd backend
+          npm install
+
+      - name: Deploy to Render
+        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
