@@ -7,8 +7,16 @@ An AI-powered app that suggests songs based on your current vibe. Built with **R
 - AI-powered vibe detection using **OpenAI API**.
 - Cool graphics & simple UI.
 
----
+## 🌐 Live Demo
+[AI Vibe Music](https://ai-vibe-music.vercel.app/)
 
+## 🛠 Tech Stack
+- ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) **React (Vite)** – Frontend
+- ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white) **Node.js** – Backend
+- ![Spotify](https://img.shields.io/badge/Spotify-1DB954?style=for-the-badge&logo=spotify&logoColor=white) **Spotify API** – Fetching song data
+- ![Gemini](https://img.shields.io/badge/Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white) **Gemini AI (OpenAI API)** – Vibe detection
+
+---
 ## 📂 Project Structure
 ```
 ai-vibe-music/
@@ -104,12 +112,11 @@ Now, every `git push` to `main` will auto-deploy your app! 🚀
 ---
 
 ## 📜 License
-MIT License © 2025 Your Name
+MIT License © 2025 Winstone Were
 
 ---
 
 ## 💡 Future Improvements
-- 🎵 Mood-based song recommendations.
 - 📊 Add cool visualizations.
 - 🗣️ Voice-based vibe detection.
 
