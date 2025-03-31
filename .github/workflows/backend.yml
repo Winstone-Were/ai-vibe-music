@@ -19,5 +19,10 @@ jobs:
           cd backend
           npm install
 
+      - name: Build TypeScript
+        run: |
+          cd backend
+          npm run build
+
       - name: Deploy to Render
         run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
