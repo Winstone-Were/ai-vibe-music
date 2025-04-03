@@ -15,12 +15,14 @@
     "@google/genai": "^0.7.0",
     "@google/generative-ai": "^0.24.0",
     "axios": "^1.8.4",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "openai": "^4.90.0"
   },
   "devDependencies": {
+    "@types/cookie-parser": "^1.4.8",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.1",
     "@types/node": "^22.13.14",
