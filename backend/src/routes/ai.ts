@@ -15,7 +15,7 @@ router.post("/", async (req, res) => {
     const prompt = `Give 5 song titles from spotify that matches this vibe: "${vibe}" in the format {Song:"song_name", Artist:"artist_name", Deescription: "2 sentence description"} no fancy formatting just text`;
 
     const response = await ai.models.generateContent({
-      model: "gemini-1.5-flash",
+      model: "gemini-2.0-flash",
       contents: prompt,
     });
 
