@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { FaSpotify, FaGithubAlt, FaCaretDown, FaPlus} from "react-icons/fa";
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/ai";
-const SPOTIFY_LOGIN_URL = "http://localhost:3000/spotify/login";
+const API_URL = "https://ai-vibe-music.onrender.com/ai";
 
 interface Song {
   title: string;
@@ -107,14 +106,39 @@ export default function MusicApp({token} : MusicAppProps) {
       {/* Top Bar with Glass UI */}
       <div className="w-full flex justify-between items-center p-4 bg-white/10 backdrop-blur-md shadow-lg rounded-lg mb-6 border border-white/20">
         <h1 className="text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#0082c8] to-blue-500">GET Gemini Suggested Songs</h1>
-        <a
-          href="https://github.com/Winstone-Were/ai-vibe-music"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center bg-white/10 px-4 py-2 rounded-lg text-white hover:bg-white/20 backdrop-blur-md border border-white/20"
-        >
-          <FaGithubAlt className="mr-2" /> GitHub
-        </a>
+        <div className="flex items-center gap-3 relative">
+          {user && (
+            <>
+              <img
+                src={user.images[0]?.url || "https://via.placeholder.com/40"}
+                alt="Profile"
+                className="w-10 h-10 rounded-full"
+              />
+              <span className="text-lg font-semibold">{user.display_name}</span>
+              <button onClick={() => setDropdownOpen(!dropdownOpen)}>
+                <FaCaretDown />
+              </button>
+              {dropdownOpen && (
+                <div className="absolute left-0 mt-2 w-40 bg-white text-black rounded-lg shadow-md">
+                  <a
+                    href={user.external_urls.spotify}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-2 hover:bg-gray-200"
+                  >
+                    View Profile
+                  </a>
+                  <button
+                    className="block w-full text-left px-4 py-2 hover:bg-gray-200"
+                    onClick={() => console.log("Logout")}
+                  >
+                    Logout
+                  </button>
+                </div>
+              )}
+            </>
+          )}
+        </div>
       </div>
 
       <form onSubmit={handleSubmit} className="mb-6 flex gap-4">
