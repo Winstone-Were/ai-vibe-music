@@ -36,7 +36,7 @@ function App() {
 
             {/* Login Button or MusicApp */}
             <a
-              href="http://localhost:5000/login"
+              href="https://ai-vibe-music.onrender.com/callback/login"
               className="mt-6 bg-green-500 px-6 py-3 rounded-lg text-white flex items-center gap-2 hover:bg-green-600 transition"
             >
               <FaSpotify className="text-2xl" /> Login with Spotify
